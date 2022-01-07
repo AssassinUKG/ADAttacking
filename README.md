@@ -26,9 +26,15 @@ sudo nano /usr/share/responder.conf
 # HTTP OFF
 ```
 
-NTLMRelay
+## NTLMRelay
 
 ```
 ntlmrelayx.py -tf targets.txt -smb2support
 ```
 ---
+
+## LDAP Brute
+
+```
+nmap -n -sV --script "ldap* and not brute" -p 389 10.10.0.9 -Pn
+```
